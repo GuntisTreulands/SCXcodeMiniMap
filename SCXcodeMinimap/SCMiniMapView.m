@@ -9,8 +9,8 @@
 #import "SCMiniMapView.h"
 #import "SCXcodeMinimap.h"
 
-const CGFloat kDefaultZoomLevel = 0.1f;
-static const CGFloat kDefaultShadowLevel = 0.1f;
+const CGFloat kDefaultZoomLevel = 0.2f;
+static const CGFloat kDefaultShadowLevel = 0.2f;
 
 static NSString * const DVTFontAndColorSourceTextSettingsChangedNotification = @"DVTFontAndColorSourceTextSettingsChangedNotification";
 
@@ -64,7 +64,7 @@ static NSString * const DVTFontAndColorSourceTextSettingsChangedNotification = @
 {
     if (_textView == nil) {
         _textView = [[NSTextView alloc] initWithFrame:self.bounds];
-        [_textView setBackgroundColor:[NSColor clearColor]];
+        [_textView setBackgroundColor:[NSColor whiteColor]];
         
         [_textView.textContainer setLineFragmentPadding:0.0f];
         

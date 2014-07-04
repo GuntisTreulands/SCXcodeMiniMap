@@ -136,7 +136,7 @@ static SCXcodeMinimap *sharedMinimap = nil;
     [editorTextView setAutoresizingMask:NSViewMinXMargin | NSViewMaxXMargin | NSViewWidthSizable | NSViewHeightSizable];
     
     /* Create Mini Map */
-    CGFloat width = editorTextView.bounds.size.width * kDefaultZoomLevel;
+    CGFloat width = (editorContainerView.bounds.size.width < 900?0:280);//editorTextView.bounds.size.width * kDefaultZoomLevel;
     
     NSRect miniMapScrollViewFrame = NSMakeRect(editorContainerView.bounds.size.width - width,
                                                0,
